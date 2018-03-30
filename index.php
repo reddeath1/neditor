@@ -16,10 +16,10 @@ if(false !== strpos($link, 'localhost') || preg_match('/192.168.43.1/',$link)){
 
 <head>
     <title>Neditor</title>
-    <link rel="stylesheet" type="text/css" href="<?php echo $link;?>style/style.css" />
-    <script type="text/javascript" src="<?php echo $link;?>js/customs.js"></script>
-    <script type="text/javascript" src="<?php echo $link;?>js/neditor.js"></script>
-    <link rel='stylesheet' type='text/css' href='<?php echo $link;?>font'>
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <script type="text/javascript" src="js/customs.js"></script>
+    <script type="text/javascript" src="js/neditor.js"></script>
+    <link rel='stylesheet' type='text/css' href='style/font-awesome-4.7.0/css/font-awesome.css'>
 </head>
 
 <header>
@@ -159,5 +159,5 @@ if(false !== strpos($link, 'localhost') || preg_match('/192.168.43.1/',$link)){
         });
     })();
 </script>
-<script type='text/javascript' src='<?php echo $link;?>js/jquery.js'></script>
+<script type='text/javascript' src='js/jquery.js'></script>
 </html>
