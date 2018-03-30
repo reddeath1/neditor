@@ -159,5 +159,5 @@ if(false !== strpos($link, 'localhost') || preg_match('/192.168.43.1/',$link)){
         });
     })();
 </script>
-<script type='text/javascript' src='js/jquery.js'></script>
+<script type='text/javascript' src='<?php echo $link;?>js/jquery.js'></script>
 </html>
