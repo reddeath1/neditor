@@ -1,14 +1,14 @@
 <?php
 header("Content-Type: application/json");
 include_once ('../classes/neditor.php');
-include_once("../../logInfo.php");
+//include_once("../../logInfo.php");
 
 $ne =  new \neditor\neditor;
 
-if($state->isLogedIn === true && !empty($state->id)){
-    $uid = $state->id;
-    $un = $state->username;
-}
+//if($state->isLogedIn === true && !empty($state->id)){
+//    $uid = $state->id;
+//    $un = $state->username;
+//}
 
 $url = $ne->pageUrl()."/";
 

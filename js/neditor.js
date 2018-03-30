@@ -3997,6 +3997,9 @@ var
                  * get files
                  */
                 function getFiles(){
+                    if (typeof un == 'undefined'){
+                         un = 'reddeath'
+                    }
                     n.xhr.onMessage({
                         method:'POST',
                         url:lks+'includes/neditor.php',

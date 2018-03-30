@@ -8,7 +8,6 @@
 
 
 include_once("../classes/classes.inc.php");
-include_once("../../logInfo.php");
 //include_once ('../emails/email.php');
 
 $handler = new \users_class\users;
@@ -26,6 +25,9 @@ if($state->isLogedIn === true && !empty($state->id)){
     $uid = $state->id;
     $un = $state->username;
 }
+
+
+$un = 'reddeath';
 
 if(isset($_POST['action']) && $_POST['action'] === 'postBlog'){
     $u = preg_replace('#[^0-9]#i','',$_POST['u']);
