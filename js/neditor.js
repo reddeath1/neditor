@@ -3851,7 +3851,7 @@ var
                 /**
                  * file initializations
                  */
-                getFiles();
+                //getFiles();
 
                 /**
                  * upload files
@@ -3998,7 +3998,7 @@ var
                  */
                 function getFiles(){
                     if (typeof un == 'undefined'){
-                         un = 'reddeath'
+                         var un = 'reddeath'
                     }
                     n.xhr.onMessage({
                         method:'POST',
@@ -4009,7 +4009,8 @@ var
                             c.loader();
 
                             if(n.xhr.readyStates(this)){
-                                var r = JSON.parse(this.responseText),cn = '';
+                                var r = JSON.stringify(this.responseText),cn = '';
+                                console.log(r);
 
                                 n.for(
                                     {
@@ -4017,10 +4018,13 @@ var
                                         data:r,
                                         asoc:true,
                                         callback:function(i){
-                                            var id = i.num,src = i.src,ext;
+                                            var id = i.num,
+                                                src = i.src,ext = '';
 
-                                            ext = src.split('.');
-                                            ext = ext[ext.length-1];
+                                            if (typeof src != 'undefined'){
+                                                ext = src.split('.');
+                                                ext = ext[ext.length-1];
+                                            }
 
                                             if(ext === 'jpg' || ext === 'JPG'
                                                 || ext === 'JPEG' || ext === 'jpeg' ||

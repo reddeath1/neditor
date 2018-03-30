@@ -104,7 +104,7 @@ else if(isset($_POST["action"]) && $_POST["action"] === 'fileupload'){
 else if(isset($_POST["action"]) && $_POST['action'] === 'getFiles'){
 
     $user = preg_replace("#[^a-z0-9_ ]#i","",$un);
-    $un= preg_replace("#[^0-9a-z-_ ]#i","",$_POST["u"]);
+    $un= preg_replace("#[^0-9a-z-_ ]#i","",$un);
 
     $path ='../all-files/blogs/';
     $data = '{';
