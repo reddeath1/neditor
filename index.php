@@ -101,45 +101,8 @@ if(false !== strpos($link, 'localhost') || preg_match('/192.168.43.1/',$link)){
 
             var l = window.location;
 
-            if(f !== '' && t !== '' && c !== '' && v !== '' && v !== '<p>Create a blog post ...</p>'){
-                n.xhr.onMessage({
-                    method:'POST',
-                    url:l+'includes/handler.php',
-                    query:'action=postBlog&u='+u+'&c='+c+'&p='+v+'&d='+d+'&t='+t+'&f='+f,
-                    header:null,
-                    success:function(){
-                        if(n.xhr.readyStates(this)){
-
-			let temr = this.response;
-
-			if(temr === ''){
-			var er = n.errorLog('Your post was successfully posted');
-                                er.e.style({background:'rgba(12,211,127,.3)',color:'rgba(12,211,127,1)',borderColor:'rgba(12,211,127,.2)'});
-                                n.eraser();
-                                va.te.value('');
-
-                                $n('.cats').value('');
-                                n.configs({file:''});
-			}else{
-			var r = JSON.parse(this.response);
-                            e.html('Create');
-                            if(r.status === 'created'){
-                                var er = n.errorLog('Your post was successfully posted');
-                                er.e.style({background:'rgba(12,211,127,.3)',color:'rgba(12,211,127,1)',borderColor:'rgba(12,211,127,.2)'});
-                                n.eraser();
-                                va.te.value('');
-
-                                $n('.cats').value('');
-                                n.configs({file:''});
-                            }else{
-                                n.errorLog(r.status);
-                            }
-			}
-
-
-                        }
-                    }
-                });
+            if(f !== ''  && v !== '' && v !== '<p>Type something here like (e.g @frank galos frankslayer1@gmail.com) ...</p>'){
+                n.errorLog('You have created something');
             }else{
                 e.html('Create');
                 if(c === ''){
