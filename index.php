@@ -56,7 +56,7 @@ if(false !== strpos($link, 'localhost') || preg_match('/192.168.43.1/',$link)){
          * set default rendering data
          */
         n.configs({
-            placeholder:'<p>Create a blog post ...</p>',
+            placeholder:'<p>Type something here like (e.g @frank galos frankslayer1@gmail.com) ...</p>',
             defaultText:'create',
             hasTitle:false,
             canExpand:false,
