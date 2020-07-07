@@ -1,7 +1,7 @@
 # neditor
 Content management editor/ rich text editor
 
- /**
+         /**
          * set default rendering data
          */
         n.configs({
